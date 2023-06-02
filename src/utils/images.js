@@ -1,4 +1,4 @@
-import logo_navbar from "../assets/logo_nav.png";
+import logo_navbar from "../assets/logonav.png";
 
 import kelastari1 from "../assets/kelastari1.png";
 import kelastari2 from "../assets/kelastari2.jpg";
@@ -20,4 +20,4 @@ const other_images = {
   logo_navbar,
 };
 
-export { kelas_images, other_images };
+export { course_images, other_images };
