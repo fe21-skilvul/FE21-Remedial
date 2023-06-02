@@ -1,7 +1,15 @@
+import Landing from "./components/Landing";
+import Ratings from "./components/Ratings";
+import Class from "./components/Class";
+import Remidial from "./components/Remidial";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Landing/>
+      <Ratings/>
+      <Class/>
+      <Remidial/>
     </>
   );
 }
