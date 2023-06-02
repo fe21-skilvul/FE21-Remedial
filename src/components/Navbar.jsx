@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { MdMenu, MdShoppingCart } from "react-icons/md";
+import { MdShoppingCart } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/cart_context";
 
@@ -24,9 +24,7 @@ const Navbar = () => {
               type="button"
               className="sidebar-open-btn"
               onClick={() => openSidebar()}
-            >
-              <MdMenu />
-            </button>
+            ></button>
           </div>
         </div>
       </div>
@@ -64,13 +62,6 @@ const NavbarWrapper = styled.nav`
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-  }
-
-  .sidebar-open-btn {
-    transition: all 300ms ease-in-out;
-    &:hover {
-      opacity: 0.7;
     }
   }
 `;
