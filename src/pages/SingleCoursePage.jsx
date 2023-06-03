@@ -154,7 +154,6 @@ const SingleCoursePage = () => {
     </SingleCourseWrapper>
   );
 };
-
 const SingleCourseWrapper = styled.div`
   background: var(--clr-dark);
   color: var(--clr-white);

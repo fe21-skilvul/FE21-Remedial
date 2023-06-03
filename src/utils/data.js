@@ -68,7 +68,7 @@ const courses = [
     image: course_images.kelaslukis3,
     course_name: "Python for Beginners - Learn Programming from scratch",
     description:
-      "Python For Beginners : This course is meant for absolute beginners in programming or in python!",
+      "Python For Beginners : This course is meant for absolute beginners",
     rating_count: 1844,
     rating_star: 4.3,
     students: 7330,
@@ -94,8 +94,7 @@ const courses = [
     id: "VwkN_o",
     category: "kelas lukis",
     image: course_images.kelaslukis4,
-    course_name:
-      "Python For Beginners : This course is meant for absolute beginners in programming or in python.",
+    course_name: "Python For Beginners : This course is meant for absolute",
     description:
       "Python introduction for beginners. Learn complete Python from scratch!",
     rating_count: 2780,

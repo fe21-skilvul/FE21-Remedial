@@ -9,9 +9,9 @@ const CoursesPage = () => {
   const { courses } = useCoursesContext();
 
   return (
-    <CoursesPageWrapper>
-      <div className="container">
-        <div className="category-based-list">
+    <section className="mb-20">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5">
           {courses
             .filter((course) => course.category === category)
             .map((course) => (
@@ -19,35 +19,8 @@ const CoursesPage = () => {
             ))}
         </div>
       </div>
-    </CoursesPageWrapper>
+    </section>
   );
 };
-
-const CoursesPageWrapper = styled.div`
-  .category-based-list {
-    margin-top: 32px;
-  }
-  @media screen and (min-width: 600px) {
-    .category-based-list {
-      display: grid;
-      gap: 26px;
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media screen and (min-width: 992px) {
-    .category-based-list {
-      display: grid;
-      gap: 26px;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  @media screen and (min-width: 1400px) {
-    .category-based-list {
-      display: grid;
-      gap: 26px;
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-`;
 
 export default CoursesPage;

@@ -8,7 +8,7 @@ const CourseList = () => {
 
   return (
     <CoursesListWrapper>
-      <div className="container">
+      <div className="container mx-auto">
         <div className="courses-list-top">
           <h2>A broad selection of courses</h2>
           <p>
@@ -22,7 +22,6 @@ const CourseList = () => {
     </CoursesListWrapper>
   );
 };
-
 const CoursesListWrapper = styled.div`
   padding: 40px 0;
   .courses-list-top p {

@@ -35,7 +35,6 @@ const CartItem = ({ cartItem }) => {
     </CartItemWrapper>
   );
 };
-
 const CartItemWrapper = styled.div`
   grid-template-columns: 110px auto;
   border: 1px solid rgba(0, 0, 0, 0.1);

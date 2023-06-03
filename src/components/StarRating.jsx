@@ -6,7 +6,7 @@ const StarRating = ({ rating_star }) => {
   const stars = Array.from({ length: 5 }, (_, idx) => {
     const val = idx + 0.5;
     return (
-      <Star key={idx}>
+      <div key={idx}>
         {rating_star >= idx + 1 ? (
           <BsStarFill />
         ) : rating_star >= val ? (
@@ -14,18 +14,11 @@ const StarRating = ({ rating_star }) => {
         ) : (
           <BsStar />
         )}
-      </Star>
+      </div>
     );
   });
 
-  return <div>{stars}</div>;
+  return <div className="flex gap-x-1 my-1">{stars}</div>;
 };
-
-const Star = styled.span`
-  color: #e59819;
-  margin-right: 2px;
-  font-size: 13px;
-  margin-bottom: -5px !important;
-`;
 
 export default StarRating;

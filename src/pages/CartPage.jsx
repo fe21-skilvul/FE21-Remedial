@@ -14,9 +14,9 @@ const CartPage = () => {
 
   if (cartItems.length < 1) {
     return (
-      <NotFoundWrapper>
+      <div>
         <div className="container">No items found in the cart.</div>
-      </NotFoundWrapper>
+      </div>
     );
   }
 

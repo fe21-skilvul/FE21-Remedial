@@ -19,94 +19,25 @@ const Course = (props) => {
   const { addToCart } = useCartContext();
 
   return (
-    <CourseCard>
-      <div className="item-img">
-        <img src={image} alt={course_name} />
+    <CourseCard className="bg-white shadow-1 p-5 rounded-lg rounded-tl-[90px] w-full max-w-[325px] mx-auto cursor-pointer hover:shadow-2xl transition">
+      <img className="mb-8 " src={image} alt={course_name} />
+      <div className="mb-4 flex gap-x-2 text-sm">
+        <div className="text-lg font-semibold max-w-[260px]">{course_name}</div>
       </div>
-      <div className="item-body">
-        <h5 className="item-name">{course_name}</h5>
-        <span className="item-creator">{creator}</span>
-        <div className="item-rating flex">
-          <span className="rating-star-val">{rating_star}</span>
+      <div className="flex gap-x-4 my-4">
+        <div className="flex items-center text-yellow-300 gap-1">
           <StarRating rating_star={rating_star} />
-          <span className="rating-count">({rating_count})</span>
-        </div>
-        <div className="item-price">
-          <span className="item-price-new">${discounted_price}</span>
-          <span className="item-price-old">${actual_price}</span>
         </div>
       </div>
       <div className="item-btns flex">
         <Link to={`/courses/${id}`} className="item-btn see-details-btn">
           See details
         </Link>
-        <Link
-          to="/cart"
-          className="item-btn add-to-cart-btn"
-          onClick={() =>
-            addToCart(
-              id,
-              image,
-              course_name,
-              creator,
-              discounted_price,
-              category
-            )
-          }
-        >
-          Add to cart
-        </Link>
       </div>
     </CourseCard>
   );
 };
-
 const CourseCard = styled.div`
-  margin-bottom: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
-  display: flex;
-  flex-direction: column;
-  .item-body {
-    margin: 14px 0;
-    padding: 4px 18px;
-
-    .item-name {
-      font-size: 15px;
-      line-height: 1.4;
-      font-weight: 800;
-    }
-    .item-creator {
-      font-size: 12.5px;
-      font-weight: 500;
-      color: rgba(0, 0, 0, 0.6);
-    }
-    .rating-star-val {
-      margin-bottom: 5px;
-      font-size: 14px;
-      font-weight: 800;
-      color: #b4690e;
-      margin-right: 6px;
-    }
-    .rating-count {
-      font-size: 12.5px;
-      margin-left: 3px;
-      font-weight: 500;
-      opacity: 0.8;
-    }
-    .item-price-new {
-      font-weight: 700;
-      font-size: 15px;
-    }
-    .item-price-old {
-      opacity: 0.8;
-      font-weight: 500;
-      text-decoration: line-through;
-      font-size: 15px;
-      margin-left: 8px;
-    }
-  }
-
   .item-btns {
     justify-self: flex-start;
     padding: 4px 8px 30px 18px;
@@ -131,9 +62,8 @@ const CourseCard = styled.div`
       }
 
       &.add-to-cart-btn {
-        background: rgba(0, 0, 0, 0.9);
-        color: var(--clr-white);
-        border: 1px solid rgba(0, 0, 0, 0.9);
+        background: green;
+        color: black;
 
         &:hover {
           background-color: transparent;

@@ -20,7 +20,7 @@ const Tabs = () => {
               className={`tab-btn ${activeTab === KELAS_LUKIS}`}
               onClick={() => tabHandler(KELAS_LUKIS)}
             >
-              KELAS_LUKIS
+              Kelas Lukis
             </button>
           </li>
           <li className="tabs-head-item">
@@ -29,7 +29,7 @@ const Tabs = () => {
               className={`tab-btn ${activeTab === KELAS_TARI}`}
               onClick={() => tabHandler(KELAS_TARI)}
             >
-              Web Development
+              Kelas Tari
             </button>
           </li>
           {/* <li className="tabs-head-item">
@@ -101,26 +101,26 @@ const TabsWrapper = styled.div`
     }
 
     .tabs-body {
-      margin-top: 32px;
+      margin-top: 22px;
     }
 
     @media screen and (min-width: 600px) {
       .tabs-body {
         display: grid;
-        gap: 26px;
+        gap: 10px;
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media screen and (min-width: 992px) {
       .tabs-body {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
       }
     }
 
     @media screen and (min-width: 1400px) {
       .tabs-body {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
