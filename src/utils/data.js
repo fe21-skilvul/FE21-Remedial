@@ -3,7 +3,7 @@ import { course_images } from "./images";
 const courses = [
   {
     id: "xMHCZl",
-    category: "kelas lukis",
+    category: "Kelas Lukis",
     image: course_images.kelaslukis1,
     course_name: "Learn Python: The Complete Python Programming Course",
     description:
@@ -33,7 +33,7 @@ const courses = [
   },
   {
     id: "dtfo9e",
-    category: "kelas lukis",
+    category: "Kelas Lukis",
     image: course_images.kelaslukis2,
     course_name: "Learning Python for Data Analysis and Visualization",
     description:
@@ -64,7 +64,7 @@ const courses = [
   },
   {
     id: "fLroW6",
-    category: "kelas lukis",
+    category: "Kelas Lukis",
     image: course_images.kelaslukis3,
     course_name: "Python for Beginners - Learn Programming from scratch",
     description:
@@ -92,7 +92,7 @@ const courses = [
   },
   {
     id: "VwkN_o",
-    category: "kelas lukis",
+    category: "Kelas Lukis",
     image: course_images.kelaslukis4,
     course_name: "Python For Beginners : This course is meant for absolute",
     description:

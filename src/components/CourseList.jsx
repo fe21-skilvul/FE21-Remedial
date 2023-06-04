@@ -12,8 +12,8 @@ const CourseList = () => {
         <div className="courses-list-top">
           <h2>A broad selection of courses</h2>
           <p>
-            Choose from 204,000 online video courses with new additions
-            publihsed every month
+            Choose from online video courses with new additions publihsed every
+            month
           </p>
         </div>
 
