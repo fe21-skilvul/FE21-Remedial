@@ -18,6 +18,9 @@ function App() {
       <Remidial />
       <Program />
       <Footer />
+      <a href="#" className="fixed right-10 bottom-10 bg-white  rounded-full">
+        <img src="src\assets\top.png" className="w-8" alt="icon arrow top" />
+      </a>
     </>
   );
 }
