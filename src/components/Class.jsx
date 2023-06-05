@@ -1,30 +1,80 @@
-import React from 'react'
+import React from "react";
 
 export default function className() {
   return (
-    <div>
-        <section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap -mx-4 -mb-10 text-center">
-      <div className="sm:w-1/2 mb-10 px-4">
-        <div className="rounded-lg h-64 overflow-hidden">
-          <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1201x501"/>
+    <div className="flex flex-col justify-center items-center bg-[#d4d4d6] md:pt-10 pt-5 md:mx-40">
+      <h1 className="text-center md:text-4xl font-bold text-xl">
+        Pilihan Kelas Kelas
+        <br /> yang Paling Diminati di 2023
+      </h1>
+      <div className=" flex md:flex-row flex-col md:my-5 ">
+        {/* items kelas */}
+        <div className="w-80 bg-[#b3eedc] md:mx-10 my-3">
+          <img src="src\assets\gambar2.png" alt="" />
+          <div className="p-2">
+            <h1 className="font-bold">Abstrak</h1>
+            <p className="py-2">
+              Seni abstrak atau seni tanwujud adalah salah satu jenis kesenian
+              kontemporer
+            </p>
+            <div className=" flex flex-col">
+              <p className="py-1">
+                <i class="fa fa-map-marker-alt "></i> Belajar online & offline
+              </p>
+              <p className="py-1">
+                <i class="fa fa-clock "></i> Belajar Lebih Fleksible
+              </p>
+              <p className="py-1">
+                <i class="fa fa-calendar-check "></i> Fulltime-{" "}
+                <b>Senin s/d Jumat (WIB) Mulai pukul : 08:30 - 16:00</b>
+              </p>
+            </div>
+            <div className="flex flex-row justify-between pt-5">
+              <a
+                className="p-2 border-2 border-red-500 rounded-xl bg-black text-white"
+                href=""
+              >
+                Ikuti Kelas ini
+              </a>
+              <h2 className="font-bold">Rp 100.000</h2>
+            </div>
+          </div>
         </div>
-        <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">Buy YouTube Videos</h2>
-        <p className="leading-relaxed text-base">Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch, slow-carb neutra irony.</p>
-        <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
-      </div>
-      <div className="sm:w-1/2 mb-10 px-4">
-        <div className="rounded-lg h-64 overflow-hidden">
-          <img alt="content" className="object-cover object-center h-full w-full" src="https://dummyimage.com/1202x502"/>
+        {/* alhir item */}
+        {/* items kelas */}
+        <div className="w-80 bg-[#b3eedc] md:mx-10 my-3 ">
+          <img src="src\assets\gambar1.png" alt="" />
+          <div className="p-2">
+            <h1 className="font-bold">Seni Lukis</h1>
+            <p className="py-2">
+              Seni lukis adalah salah satu cabang dari seni rupa yang berfokus
+              pada kegiatan melukis.
+            </p>
+            <div className=" flex flex-col">
+              <p className="py-1">
+                <i class="fa fa-map-marker-alt "></i> Belajar online & offline
+              </p>
+              <p className="py-1">
+                <i class="fa fa-clock "></i> Belajar Lebih Fleksible
+              </p>
+              <p className="py-1">
+                <i class="fa fa-calendar-check "></i> Fulltime-{" "}
+                <b>Senin s/d Jumat (WIB) Mulai pukul : 08:30 - 16:00</b>
+              </p>
+            </div>
+            <div className="flex flex-row justify-between pt-5">
+              <a
+                className="p-2 border-2 border-red-500 rounded-xl bg-black text-white"
+                href=""
+              >
+                Ikuti Kelas ini
+              </a>
+              <h2 className="font-bold">Gratis</h2>
+            </div>
+          </div>
         </div>
-        <h2 className="title-font text-2xl font-medium text-gray-900 mt-6 mb-3">The Catalyzer</h2>
-        <p className="leading-relaxed text-base">Williamsburg occupy sustainable snackwave gochujang. Pinterest cornhole brunch, slow-carb neutra irony.</p>
-        <button className="flex mx-auto mt-6 text-white bg-indigo-500 border-0 py-2 px-5 focus:outline-none hover:bg-indigo-600 rounded">Button</button>
+        {/* alhir item */}
       </div>
     </div>
-  </div>
-</section>
-    </div>
-  )
+  );
 }
