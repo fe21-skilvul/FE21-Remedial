@@ -1,28 +1,38 @@
-import React from 'react'
+import React from "react";
 
 function Landing() {
   return (
-    <div>
-        <section className="text-gray-600 body-font">
-  <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-        <br className="hidden lg:inline-block"/>readymade gluten
-      </h1>
-      <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-      <div className="flex justify-center">
-        <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+    <div
+      className="flex md:flex-row md:justify-evenly md:items-center px-10
+        md:py-32 md:px-20 py-10 flex-col"
+    >
+      <img
+        className="md:w-96
+           w-60"
+        src="src\assets\image1.png"
+        alt="Foto Personal"
+      />
+      <div className=" items-start pl-10">
+        <h1 className="font-bold md:text-5xl md:pt-0 md:mb-5 pt-5">
+          Kenapa Remidial ?
+        </h1>
+        <div className="flex flex-col ">
+          <p className="max-w-2xl md:pb-10 md:text-lg pb-5 border-b-2 mt-5">
+            <i className="fa fa-check-square "></i> Perkembangan seni rupa
+            kontemporer dalam ruang lingkup pelajar.
+          </p>
+          <p className="max-w-2xl md:pb-10 md:text-lg pb-5 border-b-2 mt-5">
+            <i class="fa fa-gift "></i> Bisa memiliki pengalaman berkarya
+            melalui pendekatan artistik yang bervariasi.
+          </p>
+          <p className="max-w-2xl md:pb-10 md:text-lg pb-5 border-b-2 mt-5">
+            <i class="fa fa-users "></i>Dengan pendekatan fotografi sebagai
+            metode pencatatan (journaling) dan pendokumentasian.
+          </p>
+        </div>
       </div>
     </div>
-    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
-    </div>
-  </div>
-</section>
-
-    </div>
-  )
+  );
 }
 
-export default Landing
+export default Landing;
