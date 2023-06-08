@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { other_images } from "../utils/images";
 
 const Hero = () => {
   return (

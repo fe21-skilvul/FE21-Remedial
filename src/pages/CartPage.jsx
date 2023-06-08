@@ -1,7 +1,6 @@
 import React from "react";
 import { useCartContext } from "../context/cart_context";
-import styled from "styled-components";
-import CartItem from "../components/CartItem";
+import CartItem from "../components/Course/CartItem";
 import { MdClear } from "react-icons/md";
 
 const CartPage = () => {

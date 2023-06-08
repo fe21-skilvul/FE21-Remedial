@@ -1,6 +1,6 @@
 import React from "react";
-import Hero from "../components/Hero";
-import CoursesList from "../components/CourseList";
+import Hero from "../components/Course/Hero";
+import CoursesList from "../components/Course/CourseList";
 import Footer from "../components/Footer";
 
 const HomePage = () => {

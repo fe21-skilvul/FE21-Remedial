@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { useCoursesContext } from "../context/courses_context";
-import StarRating from "../components/StarRating";
+import StarRating from "../components/Course/StarRating";
 import { MdInfo } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
 import { FaShoppingCart } from "react-icons/fa";

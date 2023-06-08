@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import { Link } from "react-router-dom";
-import StarRating from "../components/StarRating";
-import { useCartContext } from "../context/cart_context";
+import StarRating from "./StarRating";
+import { useCartContext } from "../../context/cart_context";
 
 const Course = (props) => {
   const {

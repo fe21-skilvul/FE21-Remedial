@@ -1,7 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { FaTrashAlt } from "react-icons/fa";
-import { useCartContext } from "../context/cart_context";
+
+import { useCartContext } from "../../context/cart_context";
 
 const CartItem = ({ cartItem }) => {
   const { removeFromCart } = useCartContext();

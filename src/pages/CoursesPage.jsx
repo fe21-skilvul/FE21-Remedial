@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
-import Course from "../components/Course";
+import Course from "../components/Course/Course";
 import { useCoursesContext } from "../context/courses_context";
 
 const CoursesPage = () => {
