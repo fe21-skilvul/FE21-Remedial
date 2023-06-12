@@ -10,6 +10,7 @@ import { RiClosedCaptioningFill } from "react-icons/ri";
 import { BiCheck } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../context/cart_context";
+import Navbar from "../components/Navbar";
 
 const SingleCoursePage = () => {
   const { id } = useParams();
@@ -40,6 +41,7 @@ const SingleCoursePage = () => {
 
   return (
     <SingleCourseWrapper>
+      <Navbar />
       <div className="course-intro mx-auto grid">
         <div className="course-img">
           <img src={image} alt={course_name} />

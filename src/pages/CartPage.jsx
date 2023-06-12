@@ -1,8 +1,8 @@
 import React from "react";
 import { useCartContext } from "../context/cart_context";
-import styled from "styled-components";
 import CartItem from "../components/CartItem";
 import { MdClear } from "react-icons/md";
+import Navbar from "../components/Navbar";
 
 const CartPage = () => {
   const {
@@ -15,15 +15,18 @@ const CartPage = () => {
   if (cartItems.length < 1) {
     return (
       <div>
+        <Navbar />
+
         <div className="container">No items found in the cart.</div>
       </div>
     );
   }
 
   return (
-    <div className="mt-20 ">
+    <div className=" ">
+      <Navbar />
       <div className="cart-pg-title">
-        <h1 class="mb-10 text-center text-2xl font-bold">
+        <h1 class="mb-10 mt-20 text-center text-2xl font-bold">
           {total_items} <span>Course in Cart</span>
         </h1>{" "}
       </div>

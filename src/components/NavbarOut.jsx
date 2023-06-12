@@ -2,29 +2,15 @@ import React from "react";
 
 import { useCartContext } from "../context/cart_context";
 
-
 import { UserAuth } from "../context/AuthContext";
 
-import { other_images } from "../utils/images";
-import { NavLink } from 'react-router-dom';
-
-
-const Navbar = () => {
+const NavbarOut = () => {
   const { total_items } = useCartContext();
   const { user, logout } = UserAuth();
-  const handleLogout = async () => {
-    try {
-      await logout();
-      navigate("/");
-      console.log("You are logged out");
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
 
   return (
     <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900 relative z-50">
+      <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center">
             <img
@@ -113,27 +99,28 @@ const Navbar = () => {
           >
             <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <NavLink className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:hover:text-blue-700  md:p-0" to="/">
-                  Home
-                </NavLink>
+                <a
+                  href="#"
+                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:hover:text-blue-700  md:p-0 "
+                ></a>
               </li>
               <li>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Programs
-                </a>
+                ></a>
               </li>
               <li>
-                <NavLink className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" to="/blog">
-                  Blogs
-                </NavLink>
+                <a
+                  href="#"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                ></a>
               </li>
               <li>
-                <NavLink className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" to="/about">
-                  About
-                </NavLink>
+                <a
+                  href="#"
+                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                ></a>
               </li>
             </ul>
           </div>
@@ -142,5 +129,5 @@ const Navbar = () => {
     </div>
   );
 };
-// {user && user.email}
-export default Navbar;
+
+export default NavbarOut;
