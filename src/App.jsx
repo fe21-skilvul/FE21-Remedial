@@ -15,8 +15,6 @@ import Signup from "./components/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 
-import Footer from "./components/Footer";
-
 // import "./index.css";
 
 function App() {
@@ -58,6 +56,9 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<DetailBlog />} />
         </Routes>
       </BrowserRouter>
     </AuthContextProvider>
