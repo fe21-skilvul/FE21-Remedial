@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import StarRating from "./StarRating";
-import { useCartContext } from "../../context/cart_context";
+import { useCartContext } from "../context/cart_context";
 
 const Course = (props) => {
   const {

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Course from "./Course";
-import { KELAS_LUKIS, KELAS_TARI } from "../../utils/constants";
-import courses from "../../utils/data";
+import { KELAS_LUKIS, KELAS_TARI } from "../utils/constants";
+import courses from "../utils/data";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState(KELAS_LUKIS);

@@ -4,18 +4,9 @@ import { useCartContext } from "../context/cart_context";
 
 import { UserAuth } from "../context/AuthContext";
 
-const Navbar = () => {
+const NavbarOut = () => {
   const { total_items } = useCartContext();
   const { user, logout } = UserAuth();
-  const handleLogout = async () => {
-    try {
-      await logout();
-      navigate("/");
-      console.log("You are logged out");
-    } catch (e) {
-      console.log(e.message);
-    }
-  };
 
   return (
     <div>
@@ -111,33 +102,25 @@ const Navbar = () => {
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:hover:text-blue-700  md:p-0 "
-                >
-                  Home
-                </a>
+                ></a>
               </li>
               <li>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Programs
-                </a>
+                ></a>
               </li>
               <li>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  Blogs
-                </a>
+                ></a>
               </li>
               <li>
                 <a
                   href="#"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  About Us
-                </a>
+                ></a>
               </li>
             </ul>
           </div>
@@ -146,5 +129,5 @@ const Navbar = () => {
     </div>
   );
 };
-// {user && user.email}
-export default Navbar;
+
+export default NavbarOut;
