@@ -4,16 +4,17 @@ import Cover from "../components/Cover";
 import Landing from "../components/Landing";
 import Ratings from "../components/Ratings";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 function LandingPage() {
   return (
-    <div>
+    <>
       <Navbar />
-      <Cover />
+      <Hero />
       <Landing />
       <Ratings />
       <Footer />
-    </div>
+    </>
   );
 }
 
