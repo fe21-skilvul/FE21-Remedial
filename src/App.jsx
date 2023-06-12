@@ -1,20 +1,26 @@
 // import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, SingleCourse, Cart, Courses, AboutPage, Blog, DetailBlog} from "./pages";
-import Navbar from "./components/Navbar";
+import {
+  Home,
+  SingleCourse,
+  Cart,
+  Courses,
+  AboutPage,
+  Blog,
+  DetailBlog,
+} from "./pages";
 
 import Signin from "./components/Signin";
 import Signup from "./components/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
-=======
+
 import Footer from "./components/Footer";
 
 // import "./index.css";
 
 function App() {
   return (
-
     <AuthContextProvider>
       <BrowserRouter>
         <Routes>
@@ -55,9 +61,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </AuthContextProvider>
-
- 
-
   );
 }
 
