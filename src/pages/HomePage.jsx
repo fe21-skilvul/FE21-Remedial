@@ -2,9 +2,13 @@ import React from "react";
 import Hero from "../components/Hero";
 import CoursesList from "../components/CourseList";
 import Footer from "../components/Footer";
+
 import Navbar from "../components/Navbar";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+
+import AboutPage from "./AboutPage";
+
 
 const HomePage = () => {
   const { user, logout } = UserAuth();
@@ -24,7 +28,6 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <CoursesList />
-      <Footer />
     </div>
   );
 };
