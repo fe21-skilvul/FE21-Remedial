@@ -1,18 +1,19 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function className() {
   return (
-    <div className="flex flex-col justify-center items-center bg-[#d4d4d6] md:pt-10 pt-5 md:mx-40">
+    <div className="flex flex-col justify-center items-center bg-white md:pt-10 pt-5 md:mx-40">
       <h1 className="text-center md:text-4xl font-bold text-xl">
         Pilihan Kelas Kelas
         <br /> yang Paling Diminati di 2023
       </h1>
       <div className=" flex md:flex-row flex-col md:my-5 ">
         {/* items kelas */}
-        <div className="w-80 bg-[#b3eedc] md:mx-10 my-3">
+        <div className="w-80 bg-white md:mx-10 my-3">
           <img src="src\assets\gambar2.png" alt="" />
           <div className="p-2">
-            <h1 className="font-bold">Abstrak</h1>
+            <h1 className="font-bold">Seni Tari</h1>
             <p className="py-2">
               Seni abstrak atau seni tanwujud adalah salah satu jenis kesenian
               kontemporer
@@ -30,25 +31,25 @@ export default function className() {
               </p>
             </div>
             <div className="flex flex-row justify-between pt-5">
-              <a
-                className="p-2 border-2 border-red-500 rounded-xl bg-black text-white"
-                href=""
+              <NavLink
+                to="/courselist"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Ikuti Kelas ini
-              </a>
+                Lihat Selengkapnya
+              </NavLink>
               <h2 className="font-bold">Rp 100.000</h2>
             </div>
           </div>
         </div>
         {/* alhir item */}
         {/* items kelas */}
-        <div className="w-80 bg-[#b3eedc] md:mx-10 my-3 ">
+        <div className="w-80 bg-gray md:mx-10 my-3 ">
           <img src="src\assets\gambar1.png" alt="" />
           <div className="p-2">
             <h1 className="font-bold">Seni Lukis</h1>
             <p className="py-2">
-              Seni lukis adalah salah satu cabang dari seni rupa yang berfokus
-              pada kegiatan melukis.
+              Seni lukis adalah cabang dari seni rupa yang berfokus pada
+              kegiatan melukis.
             </p>
             <div className=" flex flex-col">
               <p className="py-1">
@@ -64,10 +65,10 @@ export default function className() {
             </div>
             <div className="flex flex-row justify-between pt-5">
               <a
-                className="p-2 border-2 border-red-500 rounded-xl bg-black text-white"
-                href=""
+                href="#"
+                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
-                Ikuti Kelas ini
+                Lihat Selengkapnya
               </a>
               <h2 className="font-bold">Gratis</h2>
             </div>

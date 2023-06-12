@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const BlogButton = ({ id }) => {
   const navigate = useNavigate();
@@ -8,10 +8,13 @@ const BlogButton = ({ id }) => {
     navigate(`/blog/${id}`);
   };
   return (
-    <div className="w-full bg-green-600 rounded-md">
-      <button className="w-full text-white py-[6px]" onClick={detail}>
+    <div
+      onClick={detail}
+      className="w-full bg-indigo-600 rounded-md  px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline text-center focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+    >
+      <a href="#" className=" ">
         Lihat Selengkapnya
-      </button>
+      </a>
     </div>
   );
 };

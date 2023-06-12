@@ -7,7 +7,7 @@ import Navbar from "../components/Navbar";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const HomePage = () => {
+const CourseList = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
 
@@ -30,4 +30,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default CourseList;

@@ -1,20 +1,72 @@
 import React from "react";
-import img from "../assets/userr.png"
-import CardAbout from "../components/cardAbout"
+import img from "../assets/userr.png";
+import CardAbout from "../components/cardAbout";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function AboutPage() {
+  const people = [
+    {
+      name: "San Prastiwa",
+      role: "Front End ",
+      imageUrl:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    {
+      name: "Ari Viki",
+      role: "Front End",
+      imageUrl:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    {
+      name: "Chitra Agustina",
+      role: "Front End",
+      imageUrl:
+        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    },
+    // More people...
+  ];
   return (
     <div>
-        <section id="about" className="pt-16 pb-28 bg-white flex flex-col justify-center items-center">
-            <h1 className="font-libre text-4xl text-gray-900 text-center my-4">About Us</h1>
-            <div className="container px-8 pt-10 lg:px-20 font-quicksand flex flex-col justify-center items-center">
-                <div className="grid jus gap-24 md:grid-cols-3">
-                <CardAbout image={img} title="Ari Viki Firmansyah" position="Front-End-21" />
-                <CardAbout image={img} title="Chitra Agustina" position="Front-End-21" />
-                <CardAbout image={img} title="San Prastiwa" position="Front-End-21" />
+      <Navbar />
+      <div className="h-screen bg-white py-24 sm:py-32">
+        <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Meet our Teams
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
+              vitae elementum enim vitae ullamcorper suspendisse.
+            </p>
+          </div>
+          <ul
+            role="list"
+            className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+          >
+            {people.map((person) => (
+              <li key={person.name}>
+                <div className="flex items-center gap-x-6">
+                  <img
+                    className="h-16 w-16 rounded-full"
+                    src={person.imageUrl}
+                    alt=""
+                  />
+                  <div>
+                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                      {person.name}
+                    </h3>
+                    <p className="text-sm font-semibold leading-6 text-indigo-600">
+                      {person.role}
+                    </p>
+                  </div>
                 </div>
-            </div>
-        </section>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const DetailBlog = () => {
   const { id } = useParams();
@@ -24,26 +25,30 @@ const DetailBlog = () => {
     fetchData();
   }, [blog]);
   return (
-    <div className="min-h-screen pt-16 pb-14 ml-24 mr-[20rem]">
-      <div className="container border-2 p-8">
-        <div className="flex justify-center">
-          <h1 className="font-semibold text-xl tracking-wide">
-            {blog && blog.title}
-          </h1>
+    <div>
+      <Navbar />
+      <div className="min-h-screen pt-16 pb-14 ml-24 mr-[20rem]">
+        <div className="container border-2 p-8">
+          <div className="flex justify-center">
+            <h1 className="font-semibold text-xl tracking-wide">
+              {blog && blog.title}
+            </h1>
+          </div>
+          <div className="mt-4 mb-16">
+            <p className="bg-indigo-600 rounded-md w-fit text-base font-medium text-white py-2 px-3">
+              {blog && blog.author}
+            </p>
+            <h6 className="my-3 font-semibold text-lg">{blog && blog.date}</h6>
+            <img
+              src={blog && blog.image}
+              alt={blog && blog.title}
+              className="w-full h-[500px] object-fill"
+            />
+          </div>
+          <p>{blog && blog.artikel}</p>
         </div>
-        <div className="mt-4 mb-16">
-          <p className="bg-lime-700 rounded-md w-fit text-base font-medium text-white py-2 px-3">
-            {blog && blog.author}
-          </p>
-          <h6 className="my-3 font-semibold text-lg">{blog && blog.date}</h6>
-          <img
-            src={blog && blog.image}
-            alt={blog && blog.title}
-            className="w-full h-[500px] object-fill"
-          />
-        </div>
-        <p>{blog && blog.artikel}</p>
       </div>
+      <Footer />
     </div>
   );
 };

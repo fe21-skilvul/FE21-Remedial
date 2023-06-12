@@ -3,6 +3,7 @@ import {
   Home,
   SingleCourse,
   Cart,
+  List,
   Courses,
   AboutPage,
   Blog,
@@ -30,6 +31,7 @@ function App() {
             }
           />
           <Route path="/" element={<Signin />} />
+          <Route path="/courselist" element={<List />}></Route>
           <Route path="/signup" element={<Signup />} />
           <Route
             path="/courses/:id"
