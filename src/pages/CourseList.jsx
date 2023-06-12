@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import JumbotronPrograms from "../components/JumbotronPrograms";
 
 const CourseList = () => {
   const { user, logout } = UserAuth();
@@ -23,7 +24,7 @@ const CourseList = () => {
   return (
     <div className="holder">
       <Navbar />
-      <Hero />
+      <JumbotronPrograms />
       <CoursesList />
       <Footer />
     </div>
