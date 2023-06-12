@@ -7,9 +7,6 @@ import Navbar from "../components/Navbar";
 import { UserAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-import AboutPage from "./AboutPage";
-
-
 const HomePage = () => {
   const { user, logout } = UserAuth();
   const navigate = useNavigate();
@@ -28,6 +25,7 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <CoursesList />
+      <Footer />
     </div>
   );
 };
