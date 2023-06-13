@@ -231,8 +231,8 @@ const courses = [
   },
   {
     id: "RuUs0x",
-    category: "web development",
-    image: course_images.web_dev_3,
+    category: "kelas musik",
+    image: course_images.kelasmusik1,
     course_name: "Introduction to Web Development",
     description:
       "Are you Interested in Learning Web Development? Enroll in this Free course for a Dynamic Introduction to the Profession!",
@@ -258,8 +258,8 @@ const courses = [
   },
   {
     id: "e_0hBc",
-    category: "web development",
-    image: course_images.web_dev_4,
+    category: "kelas musik",
+    image: course_images.kelasmusik2,
     course_name: "Running a Web Development Business: The Complete Guide",
     description:
       "Learn how to start and grow a successful web development business. Get up & running and making sales in under a week.",
@@ -296,8 +296,8 @@ const courses = [
   },
   {
     id: "z9dxdw",
-    category: "web development",
-    image: course_images.web_dev_5,
+    category: "kelas musik",
+    image: course_images.kelasmusik3,
     course_name: "Ultimate Web Designer & Web Developer Course",
     description:
       "Become a Full-Stack Web Designer in 2022 - Learn Everything from Web Design Fundamentals to Front-End Web Development",
@@ -334,8 +334,8 @@ const courses = [
   },
   {
     id: "X8Pg1X",
-    category: "data science",
-    image: course_images.data_science_1,
+    category: "kelas tari",
+    image: course_images.kelastari3,
     course_name: "Data Science A-Z™: Real-Life Data Science Exercises Included",
     description:
       "Learn Data Science step by step through real Analytics examples. Data Mining, Modeling, Tableau Visualization and more!",
@@ -370,8 +370,8 @@ const courses = [
   },
   {
     id: "9Ui0L1",
-    category: "data science",
-    image: course_images.data_science_2,
+    category: "kelas tari",
+    image: course_images.kelastari4,
     course_name: "Machine Learning, Data Science and Deep Learning with Python",
     description:
       "Complete hands-on machine learning tutorial with data science, Tensorflow, artificial intelligence, and neural networks",

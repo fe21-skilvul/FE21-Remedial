@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Course from "./Course";
-import { KELAS_LUKIS, KELAS_TARI } from "../utils/constants";
+import { KELAS_LUKIS, KELAS_TARI, KELAS_MUSIK } from "../utils/constants";
 import courses from "../utils/data";
 
 const Tabs = () => {
@@ -32,42 +32,15 @@ const Tabs = () => {
               Kelas Tari
             </button>
           </li>
-          {/* <li className="tabs-head-item">
-            <button
-              type="button"
-              className={`tab-btn ${activeTab === DATA_SCIENCE}`}
-              onClick={() => tabHandler(DATA_SCIENCE)}
-            >
-              Data Science
-            </button>
-          </li>
           <li className="tabs-head-item">
             <button
               type="button"
-              className={`tab-btn ${activeTab === AWS}`}
-              onClick={() => tabHandler(AWS)}
+              className={`tab-btn ${activeTab === KELAS_MUSIK}`}
+              onClick={() => tabHandler(KELAS_MUSIK)}
             >
-              AWS Certification
+              Kelas Musik
             </button>
           </li>
-          <li className="tabs-head-item">
-            <button
-              type="button"
-              className={`tab-btn ${activeTab === DESIGN}`}
-              onClick={() => tabHandler(DESIGN)}
-            >
-              Design
-            </button>
-          </li>
-          <li className="tabs-head-item">
-            <button
-              type="button"
-              className={`tab-btn ${activeTab === MARKETING}`}
-              onClick={() => tabHandler(MARKETING)}
-            >
-              Marketing
-            </button>
-          </li> */}
         </ul>
 
         <div className="tabs-body">
@@ -84,19 +57,20 @@ const Tabs = () => {
 
 const TabsWrapper = styled.div`
   .tabs {
-    margin-top: 16px;
+    margin-top: 30px;
     .tabs-head-item button {
-      border: 1px solid rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(0, 0, 0, 0.2);
       padding: 10px 13px;
-      margin-right: 6px;
+      margin-right: 0px;
+      margin-left: 20px;
       transition: var(--transition);
       font-weight: 500;
-      font-size: 15px;
+      font-size: 16px;
       margin-bottom: 10px;
 
-      &:hover {
-        background-color: var(--clr-black);
-        color: var(--clr-white);
+      &:focus {
+        background-color: #4f46e5;
+        color: white;
       }
     }
 
@@ -108,19 +82,23 @@ const TabsWrapper = styled.div`
       .tabs-body {
         display: grid;
         gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
     @media screen and (min-width: 992px) {
       .tabs-body {
+        display: grid;
+        gap: 10px;
         grid-template-columns: repeat(4, 1fr);
       }
     }
 
     @media screen and (min-width: 1400px) {
       .tabs-body {
-        grid-template-columns: repeat(3, 1fr);
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 3fr);
       }
     }
   }

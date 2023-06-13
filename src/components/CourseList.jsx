@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Tabs from "./Tabs";
 import { useCoursesContext } from "../context/courses_context";
 
@@ -7,26 +6,18 @@ const CourseList = () => {
   const { courses } = useCoursesContext();
 
   return (
-    <CoursesListWrapper>
+    <div>
       <div className="container mx-auto">
-        <div className="courses-list-top">
-          <h2>A broad selection of courses</h2>
-          <p>
-            Choose from online video courses with new additions publihsed every
-            month
-          </p>
+        <div className="text-dark">
+          <h2 className="text-4xl text-gray-900 mx-5 mt-10  font-black">
+            Kelas Tersedia
+          </h2>
         </div>
 
         <Tabs courses={courses} />
       </div>
-    </CoursesListWrapper>
+    </div>
   );
 };
-const CoursesListWrapper = styled.div`
-  padding: 40px 0;
-  .courses-list-top p {
-    font-size: 1.8rem;
-  }
-`;
 
 export default CourseList;

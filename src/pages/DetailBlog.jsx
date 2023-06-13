@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import CardBlog from "../components/CardBlog";
 
 const DetailBlog = () => {
   const { id } = useParams();
@@ -70,6 +71,7 @@ const DetailBlog = () => {
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

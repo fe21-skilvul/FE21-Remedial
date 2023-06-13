@@ -42,7 +42,7 @@ export default function Example() {
   return (
     <header className="bg-white">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+        className=" mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-10"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -69,7 +69,7 @@ export default function Example() {
           <Popover className="relative">
             <NavLink
               to="/home"
-              className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+              className="hover:text-indigo-700 flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
             >
               Home
             </NavLink>
