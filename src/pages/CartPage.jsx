@@ -3,8 +3,18 @@ import { useCartContext } from "../context/cart_context";
 import CartItem from "../components/CartItem";
 import { MdClear } from "react-icons/md";
 import Navbar from "../components/Navbar";
+import StripeCheckout from "react-stripe-checkout";
+import { toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const CartPage = () => {
+  const onToken = (token) => {
+    console.log(token);
+    toast("Success ! Check emails for details", {
+      type: "success",
+    });
+  };
   const {
     cart: cartItems,
     total_items,
@@ -17,7 +27,9 @@ const CartPage = () => {
       <div>
         <Navbar />
 
-        <div className="container">No items found in the cart.</div>
+        <div className="text-center text-4xl font-bold pt-50">
+          Tidak ada item untuk dibayar, lakukan beli kelas terlebih dahulu
+        </div>
       </div>
     );
   }
@@ -57,19 +69,27 @@ const CartPage = () => {
         <div class=" rounded-lg  bg-white p-6  mx-10  md:w-1/3">
           <div class="mb-2 flex justify-between">
             <p class="text-gray-700">Subtotal</p>
-            <p class="text-gray-700">${total_amount.toFixed(2)}</p>
+            <p class="text-gray-700">Rp.{total_amount}.000</p>
           </div>
 
           <hr class="my-4" />
           <div class="flex justify-between">
             <p class="text-lg font-bold">Total</p>
             <div class="">
-              <p class="mb-1 text-lg font-bold">${total_amount.toFixed(2)}</p>
+              <p class="mb-1 text-lg font-bold">Rp.{total_amount}.000</p>
             </div>
           </div>
-          <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
+          <StripeCheckout
+            image="../src/assets/logonav.png" // the pop-in header image (default none)
+            token={onToken}
+            name="Remedial"
+            billingAddress
+            amount={total_amount * 100}
+            stripeKey="pk_test_51NIjmbESmv04Ta4Bq7f4CL7bjm2xeysmR8r0TCBSx4bXT6CSPxdjiy0dH3UBTgm9uKyVkaG7Iq0wA3iry58aBCmM00aYOu0KfK"
+          />
+          {/* <button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
             Check out
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

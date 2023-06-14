@@ -5,7 +5,6 @@ import { useCoursesContext } from "../context/courses_context";
 import StarRating from "../components/StarRating";
 import { MdInfo } from "react-icons/md";
 import { TbWorld } from "react-icons/tb";
-import { FaShoppingCart } from "react-icons/fa";
 import { RiClosedCaptioningFill } from "react-icons/ri";
 import { BiCheck } from "react-icons/bi";
 import { Link } from "react-router-dom";
@@ -46,8 +45,8 @@ const SingleCoursePage = () => {
         <div className="course-img">
           <img src={image} alt={course_name} />
         </div>
-        <div className="course-details">
-          <div className="course-category bg-white text-dark text-capitalize fw-6 fs-12 d-inline-block">
+        <div className="block max-w-sm p-6 bg-slate-100 border border-black rounded-lg shadow hover:bg-slate-200 dark:bg-white dark:border-gray-300 dark:hover:bg-white">
+          <div className=" text-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             {category}
           </div>
           <div className="course-head">
@@ -86,24 +85,26 @@ const SingleCoursePage = () => {
                 <span>
                   <RiClosedCaptioningFill />
                 </span>
-                <span className="fs-14 course-info-txt fw-5">
-                  {lang} [Auto]
-                </span>
+                <span className="fs-14 course-info-txt fw-5">{lang}</span>
               </li>
             </ul>
           </div>
 
           <div className="course-foot">
             <div className="course-price">
-              <span className="new-price fs-26 fw-8">${discounted_price}</span>
-              <span className="old-price fs-26 fw-6">${actual_price}</span>
+              <span className="new-price fs-26 fw-8">
+                Rp.{discounted_price}.000
+              </span>
+              <span className="old-price fs-26 fw-6">
+                Rp.{actual_price}.000
+              </span>
             </div>
           </div>
 
           <div className="course-btn">
             <Link
               to="/cart"
-              className="add-to-cart-btn d-inline-block fw-7 bg-purple"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               onClick={() =>
                 addToCart(
                   courseID,
@@ -115,7 +116,7 @@ const SingleCoursePage = () => {
                 )
               }
             >
-              <FaShoppingCart /> Add to cart
+              Beli Sekarang
             </Link>
           </div>
         </div>
@@ -123,7 +124,9 @@ const SingleCoursePage = () => {
 
       <div className="course-full bg-white text-dark">
         <div className="course-learn mx-auto">
-          <div className="course-sc-title">What you'll learn</div>
+          <div className="text-indigo-600 py-10 font-bold text-2xl">
+            Tentang Kelas
+          </div>
           <ul className="course-learn-list grid">
             {learnItems &&
               learnItems.map((learnItem, idx) => {
@@ -140,7 +143,7 @@ const SingleCoursePage = () => {
         </div>
 
         <div className="course-content mx-auto">
-          <div className="course-sc-title">Course content</div>
+          <div className="text-indigo-600 py-10 font-bold text-2xl">Materi</div>
           <ul className="course-content-list">
             {content &&
               content.map((contentItem, idx) => {
@@ -170,7 +173,7 @@ const SingleCourseWrapper = styled.div`
 
     .course-category {
       padding: 0px 8px;
-      border-radius: 6px;
+      border-radius: 3px;
     }
 
     .course-head {
@@ -209,7 +212,7 @@ const SingleCourseWrapper = styled.div`
     .course-price {
       margin-top: 12px;
       .old-price {
-        color: #eceb98;
+        color: ;
         text-decoration: line-through;
         margin-left: 10px;
       }

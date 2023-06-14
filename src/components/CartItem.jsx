@@ -31,7 +31,7 @@ const CartItem = ({ cartItem }) => {
               <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
                 <div class="flex items-center border-gray-100"></div>
                 <div class="flex items-center space-x-4">
-                  <p class="text-sm">${cartItem.discounted_price}</p>
+                  <p class="text-sm">Rp.{cartItem.discounted_price}.000</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
