@@ -14,7 +14,7 @@ function Landing() {
       />
       <div className=" items-start pl-10">
         <h1 className="font-bold md:text-5xl md:pt-0 md:mb-5 pt-5">
-          Kenapa Remidial ?
+          Kenapa Remedial ?
         </h1>
         <div className="flex flex-col ">
           <p className="max-w-2xl md:pb-10 md:text-lg pb-5 border-b-2 mt-5">

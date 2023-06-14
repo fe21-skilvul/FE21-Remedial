@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
@@ -25,6 +24,7 @@ const Hero = () => {
               yang Tak Terbatas, Perluas Batasan Anda, dan Buka Pintu ke Dunia
               Seni yang Luar Biasa Melalui Kursus Online Kami"
             </p>
+
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"

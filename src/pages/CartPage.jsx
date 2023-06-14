@@ -7,11 +7,10 @@ import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
-
 const CartPage = () => {
   const onToken = (token) => {
     console.log(token);
-    toast("Success ! Check emails for details", {
+    toast("Pembayaran Berhasil :D ! Terima Kasih.", {
       type: "success",
     });
   };

@@ -9,6 +9,8 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const products = [
   {
@@ -32,15 +34,16 @@ export default function Example() {
   const handleLogout = async () => {
     try {
       await logout();
+
       navigate("/");
-      alert("You are logged out");
+      toast.info("Anda Telah Loqout");
     } catch (e) {
-      console.log(e.message);
+      toast("Anda Telah Loqout");
     }
   };
 
   return (
-    <header className="bg-white">
+    <header className="bg-white font-black ">
       <nav
         className=" mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-10"
         aria-label="Global"
@@ -66,10 +69,10 @@ export default function Example() {
           </button>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
-          <Popover className="relative">
+          <Popover className="relative ">
             <NavLink
               to="/home"
-              className="hover:text-indigo-700 flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+              className="hover:bg-indigo-700 focus:bg-indigo-700 focus:text-white rounded-2xl px-5 hover:text-white flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
             >
               Home
             </NavLink>
@@ -77,20 +80,20 @@ export default function Example() {
 
           <NavLink
             to="/courselist"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="focus:bg-indigo-700 focus:text-white text-sm font-semibold leading-6 text-gray-900 hover:bg-indigo-700 rounded-2xl px-5 hover:text-white"
           >
             Programs
           </NavLink>
 
           <NavLink
             to="/blog"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="focus:bg-indigo-700 focus:text-white text-sm font-semibold leading-6 text-gray-900 hover:bg-indigo-700 rounded-2xl px-5 hover:text-white"
           >
             Blogs
           </NavLink>
           <NavLink
             to="/about"
-            className="text-sm font-semibold leading-6 text-gray-900"
+            className="focus:bg-indigo-700 focus:text-white text-sm font-semibold leading-6 text-gray-900 hover:bg-indigo-700 rounded-2xl px-5 hover:text-white"
           >
             About Us
           </NavLink>

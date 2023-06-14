@@ -10,7 +10,7 @@ const CoursesPage = () => {
   const { courses } = useCoursesContext();
 
   return (
-    <section className="mb-20">
+    <section className="mb-50">
       <Navbar />
       <JumbotronPrograms />
       <div className="container mx-auto">

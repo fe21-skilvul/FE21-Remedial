@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 import NavbarOut from "./NavbarOut";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
@@ -16,16 +18,17 @@ const Signin = () => {
     try {
       await signIn(email, password);
       navigate("/home");
-      alert("Success Login");
-    } catch (e) {
-      setError(e.message);
-      alert(e.message);
+      toast.success("Login Berhasil!");
+    } catch (error) {
+      setError(error.message);
+      toast.error("Email/Password Salah!");
     }
   };
 
   return (
     <div>
       <NavbarOut />
+
       <div className="max-w-[700px] mx-auto my-16 p-4">
         <div>
           <h1 className="text-2xl font-bold py-2">Sign in to your account</h1>

@@ -75,10 +75,12 @@ export default function classNameName() {
     //   </div>
     // </div>
     <section className="text-dark-600 body-font overflow-hidden">
-      <h1 className="text-center md:text-4xl font-bold text-xl">
-        Pilihan Kelas Kelas
-        <br /> yang Paling Diminati di 2023
+      <h1 className=" pb-5 text-center md:text-4xl font-bold text-xl">
+        <span className="text-indigo-600 ">Remedial</span> Kelas
       </h1>
+      <h2 className="text-center md:text-2xl text-sm  font-semibold md:mb-10 mb-10">
+        Yang paling diminati di 2023
+      </h2>
       <div className="container px-5 py-24 mx-auto">
         <div className="lg:w-4/5 mx-auto flex flex-wrap">
           <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
@@ -86,31 +88,33 @@ export default function classNameName() {
               Seni Lukis
             </h2>
             <h1 className="text-gray-900 text-3xl title-font font-medium mb-4">
-              Animated Night Hill Illustrations
+              Cahaya Kreativitas
             </h1>
             <div className="flex mb-4">
               <a className="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">
-                Description
+                Deskripsi
               </a>
             </div>
             <p className="leading-relaxed mb-4">
-              Fam locavore kickstarter distillery. Mixtape chillwave tumeric
-              sriracha taximy chia microdosing tilde DIY. XOXO fam inxigo
-              juiceramps cornhole raw denim forage brooklyn. Everyday carry +1
-              seitan poutine tumeric. Gastropub blue bottle austin listicle
-              pour-over, neutra jean.
+              Setelah mengikuti kelas lukis, belajar banyak teknik dan
+              keterampilan baru untuk menghasilkan karya seni yang lebih baik",
+              bisa mencampur warna dengan lebih baik dan menghasilkan efek-efek
+              yang menarik dengan berbagai media", belajar tentang komposisi
+              yang baik dan cara memanfaatkan ruang kosong dalam gambar
             </p>
             <div className="flex border-t border-gray-200 py-2">
-              <span className="text-gray-500">Color</span>
-              <span className="ml-auto text-gray-900">Blue</span>
+              <span className="text-gray-500">Language</span>
+              <span className="ml-auto text-gray-900">Indonesia</span>
             </div>
             <div className="flex border-t border-gray-200 py-2">
-              <span className="text-gray-500">Size</span>
-              <span className="ml-auto text-gray-900">Medium</span>
+              <span className="text-gray-500">Update At</span>
+              <span className="ml-auto text-gray-900">5/2022</span>
             </div>
             <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-              <span className="text-gray-500">Quantity</span>
-              <span className="ml-auto text-gray-900">4</span>
+              <span className="text-gray-500">Creator</span>
+              <span className="ml-auto text-gray-900">
+                Edwin Diaz, Coding Faculty Solutionss
+              </span>
             </div>
             <div className="flex">
               <NavLink

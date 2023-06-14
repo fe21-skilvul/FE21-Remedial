@@ -1,112 +1,148 @@
-import React from "react";
-
-import { useCartContext } from "../context/cart_context";
-
+import { Fragment, useState } from "react";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { NavLink } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
+import {
+  Bars3Icon,
+  ChartPieIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const NavbarOut = () => {
-  const { total_items } = useCartContext();
+const products = [
+  {
+    name: "Logout",
+    description: "Get a better understanding of your traffic",
+    href: "#",
+    icon: ChartPieIcon,
+  },
+];
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+export default function Navbarout() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const { user, logout } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+
+      navigate("/");
+      toast.info("Anda Telah Loqout");
+    } catch (e) {
+      toast("Anda Telah Loqout");
+    }
+  };
 
   return (
-    <div>
-      <nav className="bg-white border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" className="flex items-center">
+    <header className="bg-white font-black ">
+      <nav
+        className=" mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-10"
+        aria-label="Global"
+      >
+        <div className="flex lg:flex-1">
+          <a href="#" className="-m-1.5 p-1.5">
+            <span className="sr-only">Your Company</span>
             <img
+              className="h-8 w-auto"
               src="../src/assets/logonav.png"
-              className="h-8 mr-3"
-              alt="Flowbite Logo"
+              alt=""
             />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Remedial
-            </span>
           </a>
-          <div className="flex items-center md:order-2">
-            <div
-              className="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-              id="user-dropdown"
-            >
-              <div className="px-4 py-3">
-                <span className="block text-sm text-gray-900 dark:text-white">
-                  Bonnie Green
-                </span>
-                <span className="block text-sm  text-gray-500 truncate dark:text-gray-400">
-                  name@flowbite.com
-                </span>
-              </div>
-              <ul className="py-2" aria-labelledby="user-menu-button">
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  ></a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  ></a>
-                </li>
-              </ul>
-            </div>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
+        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          <NavLink
+            to="/signin"
+            className="focus:bg-white focus:text-indigo-600 p-2 text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-white rounded-md  px-5 hover:text-indigo-600"
+          >
+            Login / Register
+          </NavLink>
+        </Popover.Group>
+      </nav>
+      <Dialog
+        as="div"
+        className="lg:hidden"
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+      >
+        <div className="fixed inset-0 z-10" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
             <button
-              data-collapse-toggle="mobile-menu-2"
               type="button"
-              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="mobile-menu-2"
-              aria-expanded="false"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              <span className="sr-only">Open main menu</span>
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div
-            className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-            id="mobile-menu-2"
-          >
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:hover:text-blue-700  md:p-0 "
-                ></a>
-              </li>
-              <li>
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Home
+                </a>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                ></a>
-              </li>
-              <li>
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Programs
+                </a>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                ></a>
-              </li>
-              <li>
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Blogs
+                </a>
                 <a
                   href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                ></a>
-              </li>
-            </ul>
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  About Us
+                </a>
+              </div>
+              <div className="py-6">
+                <NavLink
+                  to="/signup"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Login/Register
+                </NavLink>
+              </div>
+            </div>
           </div>
-        </div>
-      </nav>
-    </div>
+        </Dialog.Panel>
+      </Dialog>
+    </header>
   );
-};
-
-export default NavbarOut;
+}

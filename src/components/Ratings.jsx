@@ -2,13 +2,15 @@ import React from "react";
 
 function Ratings() {
   return (
-    <div className="flex flex-col justify-center items-center pt-5 md:py-24">
-      <h1 className="md:text-3xl text-lg font-bold">Remedial Alumni</h1>
-      <h2 className="text-center md:text-2xl text-sm font-semibold md:mb-10 mb-10">
+    <div className="flex flex-col bg-[#eff2f6] justify-center items-center pt-5 md:py-24">
+      <h1 className="pb-3 md:text-3xl text-lg font-bold">
+        <span className="text-indigo-600">Remedial</span> Alumni
+      </h1>
+      <h2 className="text-center md:text-2xl text-sm  font-semibold md:mb-10 mb-10">
         Berikut kata alumni setelah mengikuti di program yang selenggarakan oleh
         Remedial
       </h2>
-      <div className="bg-white flex flex-col md:flex-row justify-between md:px-10 md:py-20  md:mx-40 ">
+      <div className="bg-white e rounded-xl overflow-hidden drop-shadow-md flex flex-col md:flex-row justify-between md:px-10 md:py-20  md:mx-40 ">
         {/*awal item */}
         <div className="bg-white md:w-96 rounded-xl p-3 mx-2 flex my-3">
           <img
