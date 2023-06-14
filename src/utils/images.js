@@ -17,6 +17,14 @@ import landing from "../assets/image1.png";
 import test1 from "../assets/test1.png";
 import test2 from "../assets/test2.png";
 import test3 from "../assets/test3.png";
+import kelaslukis from "../assets/kelaslukis4.png";
+import san from "../assets/sanprofil.jpeg";
+import ari from "../assets/ariprofil.jpg";
+import citra from "../assets/citraprofil.jpeg";
+import peoples from "../assets/peoples.png";
+import timer from "../assets/timer.png";
+import target from "../assets/target.png";
+import book from "../assets/bookmarks.png";
 
 const course_images = {
   kelastari1,
@@ -40,6 +48,14 @@ const other_images = {
   test1,
   test2,
   test3,
+  kelaslukis,
+  san,
+  ari,
+  citra,
+  peoples,
+  timer,
+  target,
+  book,
 };
 
 export { course_images, other_images };

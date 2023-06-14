@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { other_images } from "../utils/images";
 
 export default function classNameName() {
   return (
@@ -126,7 +127,7 @@ export default function classNameName() {
           <img
             alt="ecommerce"
             className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
-            src="src\assets\kelaslukis4.png"
+            src={other_images.kelaslukis}
           />
         </div>
       </div>

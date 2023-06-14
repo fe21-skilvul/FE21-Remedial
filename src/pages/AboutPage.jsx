@@ -3,6 +3,7 @@ import img from "../assets/userr.png";
 import CardAbout from "../components/cardAbout";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { other_images } from "../utils/images";
 
 function AboutPage() {
   const people = [
@@ -34,33 +35,73 @@ function AboutPage() {
               Meet our Teams
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Libero fames augue nisl porttitor nisi, quis. Id ac elit odio
-              vitae elementum enim vitae ullamcorper suspendisse.
+              Perkenalkan Kami sebagai Developer Website Ini
             </p>
           </div>
           <ul
             role="list"
             className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
           >
-            {people.map((person) => (
-              <li key={person.name}>
-                <div className="flex items-center gap-x-6">
-                  <img
-                    className="h-16 w-16 rounded-full"
-                    src={person.imageUrl}
-                    alt=""
-                  />
-                  <div>
-                    <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
-                      {person.name}
-                    </h3>
-                    <p className="text-sm font-semibold leading-6 text-indigo-600">
-                      {person.role}
-                    </p>
-                  </div>
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img
+                  className="h-16 w-16 rounded-full"
+                  src={other_images.san}
+                  alt=""
+                />
+                <div>
+                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                    San Prastiwa
+                  </h3>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Front End Web Developer
+                  </p>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Universitas Budi Luhur Jakarta
+                  </p>
                 </div>
-              </li>
-            ))}
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img
+                  className="h-16 w-16 rounded-full"
+                  src={other_images.citra}
+                  alt=""
+                />
+                <div>
+                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                    Chitra Agustina
+                  </h3>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Front End Web Developer
+                  </p>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Universitas Jember
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-center gap-x-6">
+                <img
+                  className="h-16 w-16 rounded-full"
+                  src={other_images.ari}
+                  alt=""
+                />
+                <div>
+                  <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">
+                    Ari Viki
+                  </h3>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Front End Web Developer
+                  </p>
+                  <p className="text-sm font-semibold leading-6 text-indigo-600">
+                    Universitas Dian Nuswantoro
+                  </p>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -87,7 +128,7 @@ function AboutPage() {
                 <img
                   alt="team"
                   class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
-                  src="../src/assets/peoples.png"
+                  src={other_images.peoples}
                 />
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font font-medium text-lg text-gray-900">
@@ -107,7 +148,7 @@ function AboutPage() {
                 <img
                   alt="team"
                   class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
-                  src="../src/assets/timer.png"
+                  src={other_images.timer}
                 />
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font font-medium text-lg text-gray-900">
@@ -127,7 +168,7 @@ function AboutPage() {
                 <img
                   alt="team"
                   class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
-                  src="../src/assets/target.png"
+                  src={other_images.target}
                 />
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font font-medium text-lg text-gray-900">
@@ -146,7 +187,7 @@ function AboutPage() {
                 <img
                   alt="team"
                   class="flex-shrink-0 rounded-lg w-20 h-20 object-cover object-center sm:mb-0 mb-4"
-                  src="../src/assets/bookmarks.png"
+                  src={other_images.book}
                 />
                 <div class="flex-grow sm:pl-8">
                   <h2 class="title-font font-medium text-lg text-gray-900">
