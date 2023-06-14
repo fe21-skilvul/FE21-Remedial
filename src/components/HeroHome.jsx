@@ -5,6 +5,7 @@ import {
   RiPlayFill,
   RiStarFill,
 } from "react-icons/ri";
+import { other_images } from "../utils/images";
 
 const HeroHome = () => {
   return (
@@ -38,7 +39,7 @@ const HeroHome = () => {
         {/* Content image */}
         <div>
           <img
-            src="../src/assets/hero.png"
+            src={other_images.hero}
             className="w-[250px] h-[250px] md:w-[450px] md:h-[450px] object-cover xl:-mt-28"
           />
           <div className="relative bg-white shadow-xl rounded-lg p-4 flex flex-col justify-center gap-2 max-w-[250px] mx-auto -mt-12">

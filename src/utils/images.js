@@ -27,11 +27,11 @@ const course_images = {
   kelasmusik1,
   kelasmusik2,
   kelasmusik3,
-  hero,
 };
 
 const other_images = {
   logo_navbar,
+  hero,
 };
 
 export { course_images, other_images };
