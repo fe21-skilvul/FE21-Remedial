@@ -49,14 +49,14 @@ export default function Navbarout() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <NavLink to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
               className="h-8 w-auto"
               src="../src/assets/logonav.png"
               alt=""
             />
-          </a>
+          </NavLink>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -71,7 +71,7 @@ export default function Navbarout() {
         <Popover.Group className="hidden lg:flex lg:gap-x-12">
           <NavLink
             to="/signin"
-            className="focus:bg-white focus:text-indigo-600 p-2 text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-white rounded-md  px-5 hover:text-indigo-600"
+            className="focus:bg-white focus:text-indigo-600 p-2 text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-indigo-700 rounded-md  px-5 hover:text-white"
           >
             Login / Register
           </NavLink>
@@ -109,7 +109,7 @@ export default function Navbarout() {
               <div className="py-6">
                 <NavLink
                   to="/signin"
-                  className="focus:bg-white focus:text-indigo-600 p-2 text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-white rounded-md  px-5 hover:text-indigo-600"
+                  className="focus:bg-white focus:text-indigo-600 p-2 text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-indigo-700 rounded-md  px-5 hover:text-indigo-600"
                 >
                   Login / Register
                 </NavLink>

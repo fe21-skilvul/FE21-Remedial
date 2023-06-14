@@ -15,7 +15,7 @@ const HeroHome = () => {
       {/* Information */}
       <div className="md:col-span-5 flex items-center justify-center p-8 xl:p-16">
         <div className="flex flex-col gap-8">
-          <h1 className="text-3xl xl:text-5xl font-bold xl:leading-[5.5rem]">
+          <h1 className="text-3xl xl:text-5xl font-bold xl:leading-[4.5rem]">
             "Kreativitas Tak Terbatas, Kelas Seni Adalah Pintu Awalmu"
           </h1>
           <p className="text-gray-500 text-2xl leading-[2.5rem]">
@@ -65,7 +65,7 @@ const HeroHome = () => {
               />
             </div>
             <h2 className="text-xl font-bold tracking-[1px] text-gray-800">
-              120 + Employees
+              120 + Student
             </h2>
             <div className="flex items-center gap-2 text-lg text-gray-500">
               <RiStarFill className="text-primary" /> 5.0 (3.1k Reviews)

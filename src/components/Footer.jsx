@@ -14,9 +14,9 @@ function Footer() {
         <img src="../src/assets/logonav.png" alt="" />
         <span className="w-full text-3xl font-bold text-black">Remedial.</span>
         <p className="py-4 ">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id odit
-          ullam iste repellat consequatur libero reiciendis, blanditiis
-          accusantium.
+          Remedial merupakan kegiatan yang akan Serrum lakukan selama 1 tahun di
+          2019. Dengan metode saling silang informasi yang menghasilkan
+          pengetahuan dan pendekatan seni dan literasi. Program ini gratis.
         </p>
         <a
           href="#"
@@ -33,7 +33,7 @@ function Footer() {
       </div>
       <div className="lg:col-span-2 flex justify-around mt-6">
         <div>
-          <h6 className="font-medium text-black">Support</h6>
+          <h6 className="font-medium text-black">Programs</h6>
           <ul>
             <li className="py-2 text-sm">Pricing</li>
             <li className="py-2 text-sm">Documentation</li>
@@ -42,7 +42,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h6 className="font-medium text-black">Company</h6>
+          <h6 className="font-medium text-black">Blogs</h6>
           <ul>
             <li className="py-2 text-sm">About</li>
             <li className="py-2 text-sm">Blog</li>
@@ -52,7 +52,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h6 className="font-medium text-black">Legal</h6>
+          <h6 className="font-medium text-black">About</h6>
           <ul>
             <li className="py-2 text-sm">Claim</li>
             <li className="py-2 text-sm">Policy</li>

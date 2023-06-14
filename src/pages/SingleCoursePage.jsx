@@ -46,7 +46,7 @@ const SingleCoursePage = () => {
           <img src={image} alt={course_name} />
         </div>
         <div className="block max-w-sm p-6 bg-slate-100 border border-black rounded-lg shadow hover:bg-slate-200 dark:bg-white dark:border-gray-300 dark:hover:bg-white">
-          <div className=" text-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          <div className=" text-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
             {category}
           </div>
           <div className="course-head">

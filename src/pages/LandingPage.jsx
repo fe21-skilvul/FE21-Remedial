@@ -5,7 +5,6 @@ import Ratings from "../components/Ratings";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Class from "../components/Class";
-import Carousel from "../components/Carousel";
 
 function LandingPage() {
   return (

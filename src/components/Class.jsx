@@ -104,7 +104,7 @@ export default function classNameName() {
             </p>
             <div className="flex border-t border-gray-200 py-2">
               <span className="text-gray-500">Language</span>
-              <span className="ml-auto text-gray-900">Indonesia</span>
+              <span className="ml-auto text-gray-900">English</span>
             </div>
             <div className="flex border-t border-gray-200 py-2">
               <span className="text-gray-500">Update At</span>
@@ -112,9 +112,7 @@ export default function classNameName() {
             </div>
             <div className="flex border-t border-b mb-6 border-gray-200 py-2">
               <span className="text-gray-500">Creator</span>
-              <span className="ml-auto text-gray-900">
-                Edwin Diaz, Coding Faculty Solutionss
-              </span>
+              <span className="ml-auto text-gray-900">Edwin Diaz</span>
             </div>
             <div className="flex">
               <NavLink

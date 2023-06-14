@@ -16,6 +16,7 @@ import Signup from "./components/Signup";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import HomePage from "./pages/HomePage";
+import ErrorPages from "./pages/ErrorPages";
 
 // import "./index.css";
 
@@ -35,6 +36,7 @@ function App() {
           theme="light"
         />
         <Routes>
+          <Route path="*" element={<ErrorPages />} />
           <Route path="/" element={<HomePage />} />
           <Route
             path="/home"
