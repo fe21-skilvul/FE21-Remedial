@@ -1,4 +1,5 @@
 import React from "react";
+import { other_images } from "../utils/images";
 
 function Ratings() {
   return (
@@ -13,11 +14,7 @@ function Ratings() {
       <div className="bg-white e rounded-xl overflow-hidden drop-shadow-md flex flex-col md:flex-row justify-between md:px-10 md:py-20  md:mx-40 ">
         {/*awal item */}
         <div className="bg-white md:w-96 rounded-xl p-3 mx-2 flex my-3">
-          <img
-            src="src\assets\test2.png"
-            alt="gambar profil"
-            className="h-20"
-          />
+          <img src={other_images.test2} alt="gambar profil" className="h-20" />
           <p className="pl-3">
             “Belajar di Remedial sangat menambah wawasan dan menyenangkan.
             Bertemu dengan facil yang insightful dan komunikatif”
@@ -26,11 +23,7 @@ function Ratings() {
         {/*akhir item */}
         {/*awal item */}
         <div className="bg-white md:w-96 rounded-xl p-3 mx-2 flex  my-3">
-          <img
-            src="src\assets\test1.png"
-            alt="gambar profil"
-            className="h-20"
-          />
+          <img src={other_images.test1} alt="gambar profil" className="h-20" />
           <p className="pl-3">
             “Senang bisa menjadi peserta dari Remidial , banyak ilmu yang
             diperoleh, menantang tetapi enjoy karena mentor yang pengertian juga
@@ -39,11 +32,7 @@ function Ratings() {
         </div>
         {/*akhir item */} {/*awal item */}
         <div className="bg-white md:w-96 rounded-xl p-3 mx-2 flex  my-3">
-          <img
-            src="src\assets\test3.png"
-            alt="gambar profil"
-            className="h-20"
-          />
+          <img src={other_images.test3} alt="gambar profil" className="h-20" />
           <p className="pl-3">
             “Program Remidial telah memberikan banyak sekali ilmu soal
             berkesenian dan penciptaan karya seni rupa sebagai sebuah instrumen

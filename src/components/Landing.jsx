@@ -1,4 +1,5 @@
 import React from "react";
+import { other_images } from "../utils/images";
 
 function Landing() {
   return (
@@ -9,7 +10,7 @@ function Landing() {
       <img
         className="md:w-96
            w-60"
-        src="src\assets\image1.png"
+        src={other_images.landing}
         alt="Foto Personal"
       />
       <div className=" items-start pl-10">

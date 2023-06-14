@@ -13,6 +13,10 @@ import kelasmusik1 from "../assets/kelasmusik1.jpg";
 import kelasmusik2 from "../assets/kelasmusik2.jpg";
 import kelasmusik3 from "../assets/kelasmusik3.jpg";
 import hero from "../assets/hero.png";
+import landing from "../assets/image1.png";
+import test1 from "../assets/test1.png";
+import test2 from "../assets/test2.png";
+import test3 from "../assets/test3.png";
 
 const course_images = {
   kelastari1,
@@ -32,6 +36,10 @@ const course_images = {
 const other_images = {
   logo_navbar,
   hero,
+  landing,
+  test1,
+  test2,
+  test3,
 };
 
 export { course_images, other_images };
