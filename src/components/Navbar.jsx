@@ -178,34 +178,34 @@ export default function Example() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
+                <NavLink
+                  to="/home"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/courselist"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Programs
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blogs
-                </a>
-                <a
-                  href="#"
+                </NavLink>
+                <NavLink
+                  to="/about"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   About Us
-                </a>
+                </NavLink>
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  onClick={handleLogout}
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Loqout

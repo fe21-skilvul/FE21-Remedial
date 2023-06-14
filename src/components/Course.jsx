@@ -38,9 +38,9 @@ const Course = (props) => {
       </div>
       <div className="flex gap-x-4 my-4 ">
         <div className="flex items-center text-black gap-1">
-          <span className="item-price-new">${discounted_price}</span>
+          <span className="item-price-new">Rp.{discounted_price * 1000}</span>
           <span className="text-lg font-medium text-gray-900 line-through dark:text-black">
-            ${actual_price}
+            Rp.{actual_price * 1000}
           </span>
         </div>
       </div>

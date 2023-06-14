@@ -25,7 +25,7 @@ const HeroHome = () => {
           <div className="flex flex-col md:flex-row items-center gap-4">
             <NavLink
               to="/signin"
-              className="w-full xl:w-auto bg-indigo-600 text-white py-4 px-8 rounded-xl text-xl"
+              className="focus:bg-white py-3   text-sm font-semibold leading-6 bg-indigo-600  text-white hover:bg-indigo-700 rounded-md  px-5 hover:text-white"
             >
               Get Started!
             </NavLink>
