@@ -12,6 +12,7 @@ import kelaslukis5 from "../assets/kelaslukis5.jpg";
 import kelasmusik1 from "../assets/kelasmusik1.jpg";
 import kelasmusik2 from "../assets/kelasmusik2.jpg";
 import kelasmusik3 from "../assets/kelasmusik3.jpg";
+import hero from "../assets/hero.png";
 
 const course_images = {
   kelastari1,
@@ -26,6 +27,7 @@ const course_images = {
   kelasmusik1,
   kelasmusik2,
   kelasmusik3,
+  hero,
 };
 
 const other_images = {
