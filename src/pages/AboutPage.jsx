@@ -77,7 +77,7 @@ function AboutPage() {
                     Front End Web Developer
                   </p>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">
-                    Universitas Jember
+                    Universitas Dian Nuswantoro
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ function AboutPage() {
                     Front End Web Developer
                   </p>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">
-                    Universitas Dian Nuswantoro
+                    Universitas Jember
                   </p>
                 </div>
               </div>
