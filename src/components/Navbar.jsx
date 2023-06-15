@@ -11,6 +11,7 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { other_images } from "../utils/images";
 
 const products = [
   {
@@ -51,11 +52,7 @@ export default function Example() {
         <div className="flex lg:flex-1">
           <NavLink to="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
-              className="h-8 w-auto"
-              src="../src/assets/logonav.png"
-              alt=""
-            />
+            <img className="h-8 w-auto" src={other_images.nav} alt="" />
           </NavLink>
         </div>
         <div className="flex lg:hidden">

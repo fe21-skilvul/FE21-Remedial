@@ -25,6 +25,7 @@ import peoples from "../assets/peoples.png";
 import timer from "../assets/timer.png";
 import target from "../assets/target.png";
 import book from "../assets/bookmarks.png";
+import nav from "../assets/logonav.png";
 
 const course_images = {
   kelastari1,
@@ -56,6 +57,7 @@ const other_images = {
   timer,
   target,
   book,
+  nav,
 };
 
 export { course_images, other_images };
